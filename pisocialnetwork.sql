@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mar. 10 déc. 2019 à 21:06
+-- Généré le :  Dim 15 déc. 2019 à 01:27
 -- Version du serveur :  5.7.19
 -- Version de PHP :  5.6.31
 
@@ -63,7 +63,7 @@ CREATE TABLE IF NOT EXISTS `claim` (
   `user_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FKm19ets51914v6d9hceuruhage` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Déchargement des données de la table `claim`
@@ -97,8 +97,9 @@ INSERT INTO `claim` (`id`, `dateReclamation`, `desciption`, `typeclaim`, `verifi
 (41, '2019-12-10', 'm', 'NORMAL', b'0', 3),
 (42, '2019-12-10', 'kk', 'NORMAL', b'0', 3),
 (43, '2019-12-10', 'aaa', 'NORMAL', b'0', 2),
-(46, '2019-12-10', 'test', 'SIGNALISATION', b'0', 1),
-(47, '2019-12-10', 'test', 'SIGNALISATION', b'0', 2);
+(47, '2019-12-10', 'test', 'SIGNALISATION', b'0', 2),
+(48, '2019-12-11', 'kk', 'NORMAL', b'0', 2),
+(50, '2019-12-11', 'hhh', 'NORMAL', b'0', 1);
 
 -- --------------------------------------------------------
 
@@ -211,7 +212,7 @@ CREATE TABLE IF NOT EXISTS `notification` (
   `user_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FK47qcspfhqn5gd49dylmnu31fb` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Déchargement des données de la table `notification`
@@ -254,7 +255,10 @@ INSERT INTO `notification` (`id`, `date`, `description`, `user_id`) VALUES
 (34, '2019-12-09', 'attention , il y a quelqun qui vous a signalé pour un movais comportement d\'utilisation, la prochaine fois votre compte sera banné', 1),
 (35, '2019-12-09', 'à cause de signalisation de votre compte plus que 2 fois ,votre compte sera banné immediatement !', 1),
 (40, '2019-12-10', 'attention , il y a quelqun qui vous a signalé pour un movais comportement d\'utilisation, la prochaine fois votre compte sera banné', 1),
-(41, '2019-12-10', 'attention , il y a quelqun qui vous a signalé pour un movais comportement d\'utilisation, la prochaine fois votre compte sera banné', 2);
+(41, '2019-12-10', 'attention , il y a quelqun qui vous a signalé pour un movais comportement d\'utilisation, la prochaine fois votre compte sera banné', 2),
+(42, '2019-12-11', 'à cause de signalisation de votre compte plus que 2 fois ,votre compte sera banné immediatement !', 1),
+(43, '2019-12-11', 'attention , il y a quelqun qui vous a signalé pour un movais comportement d\'utilisation, la prochaine fois votre compte sera banné', 1),
+(44, '2019-12-11', 'à cause de signalisation de votre compte plus que 2 fois ,votre compte sera banné immediatement !', 1);
 
 -- --------------------------------------------------------
 
@@ -269,7 +273,7 @@ CREATE TABLE IF NOT EXISTS `offre` (
   `date` date DEFAULT NULL,
   `niveauExp` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Déchargement des données de la table `offre`
@@ -285,7 +289,9 @@ INSERT INTO `offre` (`id`, `contenu`, `date`, `niveauExp`) VALUES
 (11, 'poste ingenieur', '2019-05-11', NULL),
 (12, 'poste technicien ', '2019-06-11', NULL),
 (13, 'offre 1', '2019-02-11', NULL),
-(14, 'offre 2', '2019-12-02', NULL);
+(14, 'offre 2', '2019-12-02', NULL),
+(15, 'offre de travail1', '2019-12-12', NULL),
+(16, 'offre de travail1', '2019-12-19', NULL);
 
 -- --------------------------------------------------------
 
@@ -303,7 +309,7 @@ CREATE TABLE IF NOT EXISTS `payement` (
   `user_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FKs6csstxyxqt5bhd435ed05uv3` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=111 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=113 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Déchargement des données de la table `payement`
@@ -339,7 +345,9 @@ INSERT INTO `payement` (`id`, `datePayement`, `description`, `montant`, `numeroC
 (57, '2019-11-05', 'payement pour la publication d\'un offre d\'emploi pour 5$/mois', -300, '4242424242424242', 3),
 (59, '2019-11-06', 'payement pour la publication d\'un offre d\'emploi pour 5$/mois', -300, '4242424242424242', 3),
 (60, '2019-11-06', 'payement pour la publication d\'un offre d\'emploi pour 5$/mois', -300, '4242424242424242', 3),
-(63, '2019-11-06', 'payement pour la publication d\'un offre d\'emploi pour 5$/mois', -300, '4242424242424242', 3);
+(63, '2019-11-06', 'payement pour la publication d\'un offre d\'emploi pour 5$/mois', -300, '4242424242424242', 3),
+(111, '2019-12-11', 'payement pour la publication d\'un offre d\'emploi pour 5$/mois', -300, '4242424242424242', 3),
+(112, '2019-12-11', 'payement pour la publication d\'un offre d\'emploi pour 5$/mois', -300, '4242424242424242', 3);
 
 -- --------------------------------------------------------
 
@@ -429,14 +437,14 @@ CREATE TABLE IF NOT EXISTS `user` (
   PRIMARY KEY (`id`),
   KEY `FKjk1mj8g5cs93mhii5fq74rag9` (`candidate_fk`),
   KEY `FK7iaw2e3bju8mecmtgyft0yp7f` (`companyManager_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Déchargement des données de la table `user`
 --
 
 INSERT INTO `user` (`DTYPE`, `id`, `adresse`, `gouvernorats`, `isActive`, `mail`, `nom`, `numeroCarte`, `prenom`, `typeCompte`, `afftected`, `bio`, `certification`, `parcours`, `role`, `introduction`, `nbEmployee`, `candidate_fk`, `companyManager_id`, `CustomerId`, `password`, `nbAbonnees`) VALUES
-('Candidate', 1, NULL, 'Tunis;Kairouan', b'1', 'a@a.com', 'ahmed', '4242424242424242', NULL, 'PREMIUM', 1, NULL, NULL, NULL, 'NORMAL', NULL, 9, NULL, NULL, NULL, '0000', 9),
+('Candidate', 1, NULL, 'Tunis;Kairouan', b'0', 'a@a.com', 'ahmed', '4242424242424242', NULL, 'PREMIUM', 1, NULL, NULL, NULL, 'NORMAL', NULL, 9, NULL, NULL, NULL, '0000', 9),
 ('User', 2, NULL, 'Monastir', b'1', 'b@b.com', 'ala', '4242424242424242', NULL, 'PREMIUM', 0, NULL, NULL, NULL, 'RH_MANAGER', NULL, 8, NULL, NULL, NULL, '0000', 8),
 ('CompanyManager', 3, NULL, 'Kairouan', b'1', 'c@c.com', 'omar', '4242424242424242', NULL, 'FREE', 1, NULL, NULL, NULL, 'PROJECT_MANAGER', NULL, 10, NULL, NULL, 'cus_G7nyhg05nDx9dg', '0000', 10),
 ('Candidate', 4, NULL, 'Monastir', b'1', 'aa@a.com', 'amir', '4242424242424242', NULL, 'FREE', 1, NULL, NULL, NULL, 'NORMAL', NULL, 15, NULL, NULL, 'cus_G6z772O8n6RhKU', '0000', 15),
@@ -444,7 +452,7 @@ INSERT INTO `user` (`DTYPE`, `id`, `adresse`, `gouvernorats`, `isActive`, `mail`
 ('Candidate', 6, NULL, 'Monastir', b'1', 'ahmed.benmbarek@esprit.tn', 'seif', '4242424242424242', NULL, 'PREMIUM', 1, NULL, NULL, NULL, 'NORMAL', NULL, 7, NULL, NULL, 'cus_G7SP24eQaJ1p6C', '0000', 7),
 ('Candidate', 7, NULL, 'Monastir', b'1', 'w@w.com', 'achref', '4242424242424242', NULL, 'PREMIUM', 1, NULL, NULL, NULL, 'NORMAL', NULL, 10, NULL, NULL, 'cus_G77vKkp5FGUbA0', '0000', 10),
 ('Candidate', 8, NULL, 'Tunis', b'1', 'user@user.com', 'ali', '4242424242424242', NULL, 'FREE', 1, NULL, NULL, NULL, 'NORMAL', NULL, 10, NULL, NULL, 'cus_G820wGUF8F8VoS', '0000', 10),
-('CompanyManager', 9, 'company@c.com', 'tunis', b'1', 'company@c.com', 'comany', '4242424242424242', NULL, 'FREE', 1, NULL, NULL, NULL, 'PROJECT_MANAGER', NULL, 17, NULL, NULL, NULL, '0000', 11);
+('CompanyManager', 9, NULL, 'tunis', b'1', 'company@c.com', 'comany', '4242424242424242', NULL, 'FREE', 1, NULL, NULL, NULL, 'PROJECT_MANAGER', NULL, 17, NULL, NULL, NULL, '0000', 11);
 
 -- --------------------------------------------------------
 
@@ -482,7 +490,10 @@ INSERT INTO `user_offre` (`user_id`, `offre_id`) VALUES
 (5, 12),
 (4, 13),
 (5, 13),
-(3, 3);
+(3, 3),
+(3, 14),
+(3, 15),
+(3, 16);
 
 --
 -- Contraintes pour les tables déchargées
